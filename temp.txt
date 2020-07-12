@@ -1,0 +1,17 @@
+<tr>
+					<td>Category</td>
+					<td> <select name="ddlmanager"  style="width:320px;">
+	  <option> -Select-</option>
+			 <?php
+		$sql="SELECT * FROM tbl_catergory";
+		$tbl=mysql_query($sql);
+		while($row=mysql_fetch_array($tbl))
+		{		
+		?>
+		<option value="<?php echo $row["CId"]; ?>" ><?php echo $row["CName"]; ?></option>
+		<?php
+			}  	 	 
+		?>	
+	  	 </select>
+					</td>
+				</tr>
